@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samarpan Classes – Best Maths Coaching in Supaul | JEE & NDA Coaching</title>
+<meta name="description" content="Samarpan Classes – Expert Maths coaching in Supaul for Class 6–12, JEE Mains & Advanced, NDA. Small batches, personal attention, proven results.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --yellow: #FFD600;
+    --yellow-dark: #E6C000;
+    --black: #0A0A0A;
+    --gray-light: #F5F5F5;
+    --gray-mid: #E8E8E8;
+    --text-muted: #666;
+    --text-body: #333;
+    --white: #fff;
+    --shadow-sm: 0 2px 12px rgba(0,0,0,0.07);
+    --shadow-md: 0 6px 28px rgba(0,0,0,0.10);
+    --shadow-lg: 0 16px 48px rgba(0,0,0,0.13);
+    --radius: 14px;
+    --radius-sm: 8px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-body);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─────────────────────────────────────────── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(10px);
+    border-bottom: 1.5px solid var(--gray-mid);
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--black);
+    letter-spacing: -0.5px;
+    text-decoration: none;
+  }
+  .logo span { color: var(--yellow-dark); }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-body);
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--black); }
+
+  .nav-cta {
+    background: var(--yellow);
+    color: var(--black);
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 10px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+  }
+  .nav-cta:hover { background: var(--yellow-dark); transform: translateY(-1px); }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--black); border-radius: 2px; }
+
+  /* ─── HERO ────────────────────────────────────────── */
+  #home {
+    min-height: 92vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 80px 5%;
+    gap: 60px;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  #home::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(255,214,0,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #FFF9CC;
+    border: 1.5px solid var(--yellow);
+    border-radius: 50px;
+    padding: 6px 16px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #7A6000;
+    margin-bottom: 22px;
+  }
+  .hero-badge .dot { width: 8px; height: 8px; background: var(--yellow-dark); border-radius: 50%; animation: pulse 2s infinite; }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .hero-text h1 {
+    font-size: clamp(2rem, 4vw, 3.1rem);
+    font-weight: 900;
+    color: var(--black);
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+  }
+  .hero-text h1 em {
+    font-style: normal;
+    background: linear-gradient(135deg, #FFD600 0%, #E6C000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 36px;
+    font-weight: 400;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--yellow);
+    color: var(--black);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-primary:hover { background: var(--yellow-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,214,0,0.4); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--black);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 14px 28px;
+    border-radius: 50px;
+    border: 2px solid var(--black);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-outline:hover { background: var(--black); color: var(--white); transform: translateY(-2px); }
+
+  .hero-stats {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+  .stat { display: flex; flex-direction: column; }
+  .stat-num { font-size: 1.7rem; font-weight: 900; color: var(--black); line-height: 1; }
+  .stat-label { font-size: 0.75rem; color: var(--text-muted); font-weight: 500; margin-top: 4px; }
+
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-card-stack {
+    position: relative;
+    width: 340px;
+    height: 400px;
+  }
+
+  .hero-main-card {
+    width: 100%;
+    background: var(--black);
+    border-radius: 24px;
+    padding: 36px 32px;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+  }
+  .hero-main-card::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 180px; height: 180px;
+    background: radial-gradient(circle, rgba(255,214,0,0.2) 0%, transparent 70%);
+  }
+
+  .card-icon { font-size: 2.5rem; margin-bottom: 20px; }
+  .hero-main-card h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 8px; }
+  .hero-main-card p { font-size: 0.85rem; color: rgba(255,255,255,0.65); line-height: 1.6; }
+
+  .hero-float-1, .hero-float-2 {
+    position: absolute;
+    background: var(--white);
+    border-radius: 14px;
+    box-shadow: var(--shadow-md);
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--black);
+    animation: floatY 4s ease-in-out infinite;
+  }
+  .hero-float-1 { bottom: 40px; left: -30px; animation-delay: 0s; }
+  .hero-float-2 { top: -20px; right: -20px; animation-delay: 2s; }
+
+  @keyframes floatY {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .float-icon { font-size: 1.4rem; }
+
+  /* ─── SECTION BASE ────────────────────────────────── */
+  section { padding: 90px 5%; }
+  .section-tag {
+    display: inline-block;
+    background: #FFF9CC;
+    border: 1.5px solid #FFD600;
+    color: #7A6000;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 50px;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .section-title {
+    font-size: clamp(1.7rem, 3.5vw, 2.5rem);
+    font-weight: 800;
+    color: var(--black);
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .section-sub {
+    font-size: 1rem;
+    color: var(--text-muted);
+    max-width: 500px;
+    line-height: 1.7;
+    margin-bottom: 50px;
+  }
+
+  /* ─── TOPPERS CAROUSEL ────────────────────────────── */
+  #toppers { background: var(--gray-light); }
+
+  .carousel-outer {
+    position: relative;
+    overflow: hidden;
+    /* fade edges */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 22px;
+    width: max-content;
+    animation: carouselScroll 22s linear infinite;
+    cursor: grab;
+  }
+  .carousel-track:active { cursor: grabbing; }
+  .carousel-track:hover { animation-play-state: paused; }
+
+  @keyframes carouselScroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .topper-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 24px 20px 20px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-mid);
+    text-align: center;
+    width: 260px;
+    flex-shrink: 0;
+    transition: transform 0.25s, box-shadow 0.25s;
+    user-select: none;
+  }
+  .topper-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+  /* Large circular image */
+  .topper-photo-wrap {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    overflow: hidden;
+    border: 3px solid var(--yellow);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+    background: var(--gray-light);
+    flex-shrink: 0;
+  }
+  .topper-photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  /* Avatar initials fallback */
+  .topper-avatar-init {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--black);
+    color: var(--yellow);
+    font-size: 2rem;
+    font-weight: 800;
+    border-radius: 50%;
+  }
+
+  /* Name + score same row */
+  .topper-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+  .topper-name {
+    font-weight: 700;
+    font-size: 0.93rem;
+    color: var(--black);
+    text-align: left;
+    line-height: 1.3;
+  }
+  .topper-score-badge {
+    background: var(--yellow);
+    color: var(--black);
+    font-weight: 800;
+    font-size: 0.72rem;
+    padding: 4px 9px;
+    border-radius: 50px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .topper-class {
+    font-size: 0.74rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 12px;
+  }
+  .topper-divider {
+    width: 36px;
+    height: 2px;
+    background: var(--yellow);
+    border-radius: 2px;
+    margin: 0 auto 11px;
+  }
+  .topper-achievement {
+    font-size: 0.79rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  /* Dots */
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 28px;
+  }
+  .carousel-dots span {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--gray-mid);
+    display: inline-block;
+    transition: background 0.3s, transform 0.3s;
+  }
+  .carousel-dots span.active {
+    background: var(--yellow-dark);
+    transform: scale(1.3);
+  }
+
+  /* ─── ABOUT TEACHER ───────────────────────────────── */
+  #about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+    padding: 90px 5%;
+  }
+  .about-img-wrap {
+    position: relative;
+  }
+  .teacher-placeholder {
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 4/5;
+    background: var(--gray-light);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    border: 2px solid var(--gray-mid);
+    position: relative;
+    overflow: hidden;
+  }
+  .teacher-placeholder::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 40%;
+    background: linear-gradient(to top, rgba(0,0,0,0.06), transparent);
+    border-radius: 0 0 24px 24px;
+  }
+  .exp-badge {
+    position: absolute;
+    bottom: -16px; right: 20px;
+    background: var(--yellow);
+    color: var(--black);
+    font-weight: 800;
+    font-size: 0.9rem;
+    padding: 14px 20px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    line-height: 1.3;
+  }
+  .exp-badge .big { font-size: 1.6rem; display: block; }
+
+  .about-text h2 { margin-bottom: 18px; }
+  .about-text p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 28px;
+  }
+  .about-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .chip {
+    background: var(--gray-light);
+    border: 1.5px solid var(--gray-mid);
+    border-radius: 50px;
+    padding: 7px 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-body);
+  }
+
+  /* ─── COURSES ─────────────────────────────────────── */
+  #courses { background: var(--gray-light); }
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .course-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 28px 22px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-mid);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .course-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .course-icon {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+    width: 52px; height: 52px;
+    background: var(--gray-light);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .course-card h3 { font-size: 1rem; font-weight: 700; color: var(--black); margin-bottom: 10px; }
+  .course-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.65; flex: 1; margin-bottom: 22px; }
+  .course-card .btn-enroll {
+    background: var(--black);
+    color: var(--white);
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.2s;
+    display: block;
+  }
+  .course-card .btn-enroll:hover { background: #222; }
+  .course-card.featured { background: var(--black); }
+  .course-card.featured h3, .course-card.featured p { color: rgba(255,255,255,0.85); }
+  .course-card.featured h3 { color: var(--yellow); }
+  .course-card.featured .course-icon { background: rgba(255,255,255,0.08); }
+  .course-card.featured .btn-enroll { background: var(--yellow); color: var(--black); }
+  .course-card.featured .btn-enroll:hover { background: var(--yellow-dark); }
+
+  /* ─── WHY CHOOSE ──────────────────────────────────── */
+  #why .why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .why-card {
+    background: var(--gray-light);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    border: 1.5px solid var(--gray-mid);
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .why-card:hover { border-color: var(--yellow); transform: translateY(-3px); }
+  .why-icon {
+    font-size: 2rem;
+    width: 54px; height: 54px;
+    background: var(--white);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    box-shadow: var(--shadow-sm);
+  }
+  .why-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--black); margin-bottom: 8px; }
+  .why-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.65; }
+
+  /* ─── TESTIMONIALS ────────────────────────────────── */
+  #testimonials { background: var(--white); }
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+  .testi-card {
+    background: var(--gray-light);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    border: 1px solid var(--gray-mid);
+    transition: transform 0.25s;
+  }
+  .testi-card:hover { transform: translateY(-3px); }
+  .stars { color: var(--yellow-dark); font-size: 1rem; margin-bottom: 14px; letter-spacing: 2px; }
+  .testi-quote {
+    font-size: 0.88rem;
+    color: var(--text-body);
+    line-height: 1.75;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  .testi-person {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .testi-avatar {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--yellow);
+    font-weight: 800;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+  .testi-name { font-weight: 700; font-size: 0.88rem; color: var(--black); }
+  .testi-class { font-size: 0.75rem; color: var(--text-muted); }
+
+  /* ─── CONTACT & MAP ───────────────────────────────── */
+  #contact { background: var(--gray-light); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 50px;
+    align-items: start;
+  }
+  .contact-info h2 { margin-bottom: 14px; }
+  .contact-info p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 30px; }
+  .contact-items { display: flex; flex-direction: column; gap: 16px; }
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: var(--white);
+    padding: 16px 18px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--gray-mid);
+  }
+  .contact-item-icon {
+    width: 40px; height: 40px;
+    background: var(--yellow);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .contact-item-text .label { font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+  .contact-item-text .value { font-size: 0.9rem; color: var(--black); font-weight: 600; margin-top: 2px; }
+  .contact-item-text a { color: var(--black); text-decoration: none; }
+  .contact-item-text a:hover { color: var(--yellow-dark); }
+
+  .contact-btns { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+  .btn-wa {
+    background: #25D366;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.88rem;
+    padding: 12px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+  .btn-wa:hover { opacity: 0.9; transform: translateY(-2px); }
+  .btn-call {
+    background: var(--black);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.88rem;
+    padding: 12px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-call:hover { background: #222; transform: translateY(-2px); }
+
+  .map-wrap {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-mid);
+    height: 100%;
+    min-height: 380px;
+  }
+  .map-wrap iframe { width: 100%; height: 100%; min-height: 380px; display: block; border: none; }
+
+  /* ─── FINAL CTA ───────────────────────────────────── */
+  #cta {
+    background: var(--black);
+    text-align: center;
+    padding: 90px 5%;
+    position: relative;
+    overflow: hidden;
+  }
+  #cta::before {
+    content: '';
+    position: absolute;
+    top: -80px; left: 50%;
+    transform: translateX(-50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(255,214,0,0.12) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  #cta .section-tag { background: rgba(255,214,0,0.15); border-color: rgba(255,214,0,0.5); color: var(--yellow); }
+  #cta h2 { color: var(--white); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; margin-bottom: 16px; }
+  #cta p { color: rgba(255,255,255,0.6); font-size: 1rem; margin-bottom: 36px; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+  /* ─── FOOTER ──────────────────────────────────────── */
+  footer {
+    background: #111;
+    color: rgba(255,255,255,0.6);
+    padding: 50px 5% 30px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 40px;
+  }
+  .footer-brand .logo { color: var(--white); font-size: 1.2rem; }
+  .footer-brand p { font-size: 0.82rem; line-height: 1.7; margin-top: 12px; max-width: 260px; }
+  .footer-col h4 { color: var(--white); font-size: 0.9rem; font-weight: 700; margin-bottom: 16px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.83rem; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--yellow); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 22px;
+    font-size: 0.78rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* ─── FLOATING WHATSAPP ───────────────────────────── */
+  .wa-float {
+    position: fixed;
+    bottom: 28px; right: 28px;
+    z-index: 999;
+    background: #25D366;
+    color: var(--white);
+    width: 58px; height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: floatY 3s ease-in-out infinite;
+  }
+  .wa-float:hover { transform: scale(1.12); box-shadow: 0 10px 32px rgba(37,211,102,0.5); }
+
+  /* ─── MOBILE ──────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+
+    #home { grid-template-columns: 1fr; padding: 60px 5%; text-align: center; min-height: auto; }
+    .hero-visual { display: none; }
+    .hero-btns { justify-content: center; }
+    .hero-stats { justify-content: center; }
+
+    #about { grid-template-columns: 1fr; gap: 40px; padding: 70px 5%; }
+    .about-img-wrap { display: none; }
+    .courses-grid { grid-template-columns: repeat(2, 1fr); }
+    #why .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .testi-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+  }
+
+  @media (max-width: 600px) {
+    .courses-grid { grid-template-columns: 1fr; }
+    #why .why-grid { grid-template-columns: 1fr; }
+    .hero-btns { flex-direction: column; align-items: center; }
+    .hero-btns a { width: 100%; text-align: center; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/917454957454?text=Hello%2C%20I%20want%20to%20join%20Samarpan%20Classes%20demo%20class" class="wa-float" target="_blank" title="Chat on WhatsApp">💬</a>
+
+<!-- ─── NAV ─── -->
+<nav id="navbar">
+  <a href="#home" class="logo">Samarpan <span>Classes</span></a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="#toppers">Results</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/917454957454?text=Hello%2C%20I%20want%20to%20book%20a%20demo%20class" class="nav-cta" target="_blank">Join Demo Class</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section id="home">
+  <div class="hero-text">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      Best Maths Coaching in Supaul
+    </div>
+    <h1>Expert Maths Coaching for <em>Class 6–12, JEE & NDA</em></h1>
+    <p class="hero-sub">Strong concepts. Better marks. Proven results.<br>Join Supaul's most trusted Maths coaching centre.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/917454957454?text=Hello%2C%20I%20want%20to%20book%20a%20demo%20class" class="btn-primary" target="_blank">
+        🎓 Join Demo Class
+      </a>
+      <a href="tel:+917454957454" class="btn-outline">
+        📞 Call Now
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">500+</span>
+        <span class="stat-label">Students Taught</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">8+</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">95%</span>
+        <span class="stat-label">Pass Rate</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-card-stack">
+      <div class="hero-main-card">
+        <div class="card-icon">📐</div>
+        <h3>Samarpan Classes</h3>
+        <p>Personal attention for every student. Small batches. Regular tests. Proven concept-building methods.</p>
+        <br>
+        <p style="color: rgba(255,214,0,0.85); font-weight: 600; font-size: 0.9rem;">Mela Rd, Supaul, Bihar</p>
+      </div>
+      <div class="hero-float-1">
+        <span class="float-icon">✅</span>
+        <span>JEE Coaching Available</span>
+      </div>
+      <div class="hero-float-2">
+        <span class="float-icon">⭐</span>
+        <span>Top Results Every Year</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TOPPERS ─── -->
+<section id="toppers">
+  <div class="section-tag">Meet Our Stars ✨</div>
+  <h2 class="section-title">Our Students Achieve Excellence</h2>
+  <p class="section-sub">Our students consistently achieve excellent results through hard work and concept-focused teaching.</p>
+
+  <div class="carousel-outer" id="topperCarousel">
+    <div class="carousel-track" id="carouselTrack">
+
+      <!-- Card 1: Alok Kumar -->
+      <div class="topper-card">
+        <div class="topper-photo-wrap">
+          <img src="https://drive.google.com/thumbnail?id=1lW3mP_-v8CWf6TroagJT0NR9a2gUvBFJ&sz=w300" alt="Alok Kumar" />
+        </div>
+        <div class="topper-meta">
+          <div class="topper-name">Alok Kumar</div>
+          <span class="topper-score-badge">88 / 100</span>
+        </div>
+        <div class="topper-class">Class 12 Board · BSEB</div>
+        <div class="topper-divider"></div>
+        <p class="topper-achievement">Improved from 61 to 88 in Maths. Regular tests and concept-focused sessions made a real difference.</p>
+      </div>
+
+      <!-- Card 2: Priya Singh -->
+      <div class="topper-card">
+        <div class="topper-photo-wrap">
+          <img src="https://drive.google.com/thumbnail?id=1F3MySxpmsm96KlHpnjCVVoSogAvZeGxF&sz=w300" alt="Priya Singh" />
+        </div>
+        <div class="topper-meta">
+          <div class="topper-name">Priya Singh</div>
+          <span class="topper-score-badge">91 / 100</span>
+        </div>
+        <div class="topper-class">Class 10 Board · BSEB</div>
+        <div class="topper-divider"></div>
+        <p class="topper-achievement">Went from 54 to 91 in one year. Maths became her strongest subject after joining.</p>
+      </div>
+
+      <!-- Card 3: Rahul Verma -->
+      <div class="topper-card">
+        <div class="topper-photo-wrap">
+          <img src="https://drive.google.com/thumbnail?id=1J0NqUO9NIqy408mb8VCd4gQ3LpcJOrJs&sz=w300" alt="Rahul Verma" />
+        </div>
+        <div class="topper-meta">
+          <div class="topper-name">Rahul Verma</div>
+          <span class="topper-score-badge">JEE Qualified</span>
+        </div>
+        <div class="topper-class">JEE Mains Aspirant · 2024</div>
+        <div class="topper-divider"></div>
+        <p class="topper-achievement">Cleared JEE Mains on first attempt. Strong foundation from Samarpan Classes gave him the edge.</p>
+      </div>
+
+      <!-- Card 4: Placeholder -->
+      <div class="topper-card">
+        <div class="topper-photo-wrap">
+          <div class="topper-avatar-init">S</div>
+        </div>
+        <div class="topper-meta">
+          <div class="topper-name">Suresh Yadav</div>
+          <span class="topper-score-badge">85 / 100</span>
+        </div>
+        <div class="topper-class">Class 10 Board · BSEB</div>
+        <div class="topper-divider"></div>
+        <p class="topper-achievement">Struggled with algebra and geometry before joining. Scored 85 after just 6 months of focused coaching.</p>
+      </div>
+
+      <!-- Card 5: Placeholder -->
+      <div class="topper-card">
+        <div class="topper-photo-wrap">
+          <div class="topper-avatar-init">A</div>
+        </div>
+        <div class="topper-meta">
+          <div class="topper-name">Anjali Kumari</div>
+          <span class="topper-score-badge">93 / 100</span>
+        </div>
+        <div class="topper-class">Class 12 Board · BSEB</div>
+        <div class="topper-divider"></div>
+        <p class="topper-achievement">Topped her school in Maths. Credits sir's concept-clarity method for her consistent high performance.</p>
+      </div>
+
+      <!-- Card 6: Placeholder -->
+      <div class="topper-card">
+        <div class="topper-photo-wrap">
+          <div class="topper-avatar-init">V</div>
+        </div>
+        <div class="topper-meta">
+          <div class="topper-name">Vikram Jha</div>
+          <span class="topper-score-badge">NDA Selected</span>
+        </div>
+        <div class="topper-class">NDA Preparation · 2024</div>
+        <div class="topper-divider"></div>
+        <p class="topper-achievement">Cleared NDA written exam on second attempt. Maths coaching at Samarpan Classes was the turning point.</p>
+      </div>
+
+      <!-- Duplicate set for seamless loop -->
+      <div class="topper-card">
+        <div class="topper-photo-wrap">
+          <img src="https://drive.google.com/thumbnail?id=1lW3mP_-v8CWf6TroagJT0NR9a2gUvBFJ&sz=w300" alt="Alok Kumar" />
+        </div>
+        <div class="topper-meta">
+          <div class="topper-name">Alok Kumar</div>
+          <span class="topper-score-badge">88 / 100</span>
+        </div>
+        <div class="topper-class">Class 12 Board · BSEB</div>
+        <div class="topper-divider"></div>
+        <p class="topper-achievement">Improved to 88/100 with focused preparation and clear concepts.</p>
+      </div>
+
+      <div class="topper-card">
+        <div class="topper-photo-wrap">
+          <img src="https://drive.google.com/thumbnail?id=1F3MySxpmsm96KlHpnjCVVoSogAvZeGxF&sz=w300" alt="Priya Singh" />
+        </div>
+        <div class="topper-meta">
+          <div class="topper-name">Radha Kumari</div>
+          <span class="topper-score-badge">90/100</span>
+        </div>
+        <div class="topper-class">Class 12 Board · BSEB</div>
+        <div class="topper-divider"></div>
+        <p class="topper-achievement">Scored 90/100 in Maths with strong concepts and consistent practice.</p>
+      </div>
+
+      <div class="topper-card">
+        <div class="topper-photo-wrap">
+          <img src="https://drive.google.com/thumbnail?id=1J0NqUO9NIqy408mb8VCd4gQ3LpcJOrJs&sz=w300" alt="Rahul Verma" />
+        </div>
+        <div class="topper-meta">
+          <div class="topper-name">Khushi Kumari</div>
+          <span class="topper-score-badge">81/100</span>
+        </div>
+        <div class="topper-class">Class 12 Board · BSEB</div>
+        <div class="topper-divider"></div>
+        <p class="topper-achievement">Scored 81/100 in Maths with the right guidance and practice.</p>
+      </div>
+
+      <div class="topper-card">
+        <div class="topper-photo-wrap">
+          <div class="topper-avatar-init">S</div>
+        </div>
+        <div class="topper-meta">
+          <div class="topper-name">Rahul Sah</div>
+          <span class="topper-score-badge">85 / 100</span>
+        </div>
+        <div class="topper-class">Class 10 Board · BSEB</div>
+        <div class="topper-divider"></div>
+        <p class="topper-achievement">Struggled with algebra and geometry before joining. Scored 85 after just 6 months of focused coaching.</p>
+      </div>
+
+      <div class="topper-card">
+        <div class="topper-photo-wrap">
+          <div class="topper-avatar-init">A</div>
+        </div>
+        <div class="topper-meta">
+          <div class="topper-name">Anjali Kumari</div>
+          <span class="topper-score-badge">93 / 100</span>
+        </div>
+        <div class="topper-class">Class 12 Board · BSEB</div>
+        <div class="topper-divider"></div>
+        <p class="topper-achievement">Topped her school in Maths. Credits sir's concept-clarity method for her consistent high performance.</p>
+      </div>
+
+      <div class="topper-card">
+        <div class="topper-photo-wrap">
+          <div class="topper-avatar-init">V</div>
+        </div>
+        <div class="topper-meta">
+          <div class="topper-name">Vikram Jha</div>
+          <span class="topper-score-badge">NDA Selected</span>
+        </div>
+        <div class="topper-class">NDA Preparation · 2024</div>
+        <div class="topper-divider"></div>
+        <p class="topper-achievement">Cleared NDA written exam on second attempt. Maths coaching at Samarpan Classes was the turning point.</p>
+      </div>
+
+    </div><!-- end track -->
+  </div><!-- end outer -->
+
+  <div class="carousel-dots" id="carouselDots">
+    <span class="active"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+</section>
+
+<!-- ─── ABOUT TEACHER ─── -->
+<section id="about">
+  <div class="about-img-wrap">
+    <div class="teacher-placeholder">👨‍🏫</div>
+    <div class="exp-badge">
+      <span class="big">8+</span>
+      Years of Teaching
+    </div>
+  </div>
+
+  <div class="about-text">
+    <div class="section-tag">About the Teacher</div>
+    <h2 class="section-title">Dedicated. Experienced. Student-First.</h2>
+    <p>With over 8 years of experience teaching Mathematics, our founder has helped hundreds of students in Supaul go from struggling to excelling. The focus is always on building strong fundamentals — not just passing exams, but truly understanding concepts.</p>
+    <p>Every student receives personal attention. Doubts are cleared in class, performance is tracked through regular tests, and teaching pace adapts to the student's needs. Whether you're preparing for boards, JEE, or NDA, you'll find the right guidance here.</p>
+    <div class="about-chips">
+      <span class="chip">🎯 Concept-First Teaching</span>
+      <span class="chip">📊 Performance Tracking</span>
+      <span class="chip">📝 Regular Tests</span>
+      <span class="chip">🏆 JEE & NDA Expert</span>
+      <span class="chip">👥 Small Batches</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── COURSES ─── -->
+<section id="courses">
+  <div class="section-tag">Our Courses</div>
+  <h2 class="section-title">Courses We Offer</h2>
+  <p class="section-sub">Structured programs for every level — from school foundations to competitive exam prep.</p>
+
+  <div class="courses-grid">
+    <div class="course-card">
+      <div class="course-icon">📚</div>
+      <h3>Class 6–10 (Foundation Maths)</h3>
+      <p>Build a rock-solid foundation. Clear NCERT concepts, master problem-solving, and prepare for board exams with confidence.</p>
+      <a href="https://wa.me/917454957454?text=I%20want%20to%20enroll%20in%20Class%206-10%20Foundation%20Maths" class="btn-enroll" target="_blank">Enroll Now</a>
+    </div>
+
+    <div class="course-card featured">
+      <div class="course-icon">🏫</div>
+      <h3>Class 11–12 (Board + Concepts)</h3>
+      <p>In-depth coverage of Class 11 & 12 Maths. Strong board exam prep with deep conceptual understanding for higher studies.</p>
+      <a href="https://wa.me/917454957454?text=I%20want%20to%20enroll%20in%20Class%2011-12%20Maths" class="btn-enroll" target="_blank">Enroll Now</a>
+    </div>
+
+    <div class="course-card">
+      <div class="course-icon">⚡</div>
+      <h3>JEE Mains + Advanced</h3>
+      <p>Targeted preparation for JEE Mains and Advanced. Problem-solving strategies, mock tests, and personalized doubt-clearing sessions.</p>
+      <a href="https://wa.me/917454957454?text=I%20want%20to%20enroll%20in%20JEE%20Coaching" class="btn-enroll" target="_blank">Enroll Now</a>
+    </div>
+
+    <div class="course-card">
+      <div class="course-icon">🎖️</div>
+      <h3>NDA Preparation</h3>
+      <p>Complete Maths preparation for NDA written exam. Covers all NDA syllabus topics with focused practice and timed tests.</p>
+      <a href="https://wa.me/917454957454?text=I%20want%20to%20enroll%20in%20NDA%20Preparation" class="btn-enroll" target="_blank">Enroll Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHY CHOOSE ─── -->
+<section id="why">
+  <div class="section-tag">Why Choose Us</div>
+  <h2 class="section-title">What Makes Samarpan Classes Different</h2>
+  <p class="section-sub">We're not just a coaching centre. We're a place where students build real confidence in Maths.</p>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">👥</div>
+      <h3>Small Batch Sizes</h3>
+      <p>Limited seats in every batch ensure no student is overlooked. Quality over quantity — always.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🎯</div>
+      <h3>Personal Attention</h3>
+      <p>Individual doubt sessions, personalized feedback, and teaching pace tailored to each student's progress.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">📊</div>
+      <h3>Regular Tests & Tracking</h3>
+      <p>Frequent tests, detailed result analysis, and progress reports keep students and parents always informed.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🧠</div>
+      <h3>Concept-First Approach</h3>
+      <p>We build understanding from the ground up, not just shortcuts. Students who understand concepts perform consistently well.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TESTIMONIALS ─── -->
+<section id="testimonials">
+  <div class="section-tag">Testimonials</div>
+  <h2 class="section-title">What Our Students Say</h2>
+  <p class="section-sub">Real feedback from real students and parents in Supaul.</p>
+
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p class="testi-quote">"Sir explains every concept so clearly. I used to fail in Maths, but now I score 80+. The teaching style is different from other coaching classes."</p>
+      <div class="testi-person">
+        <div class="testi-avatar">S</div>
+        <div>
+          <div class="testi-name">Sneha Kumari</div>
+          <div class="testi-class">Class 9 · Student</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p class="testi-quote">"My son's marks improved from 55 to 88 in just one year. The personal attention and regular tests really helped. Highly recommended for all students."</p>
+      <div class="testi-person">
+        <div class="testi-avatar">M</div>
+        <div>
+          <div class="testi-name">Manoj Kumar Sah</div>
+          <div class="testi-class">Parent of Class 10 student</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p class="testi-quote">"Best coaching for JEE Maths in Supaul. The focus on building strong basics before jumping to complex problems really works for JEE preparation."</p>
+      <div class="testi-person">
+        <div class="testi-avatar">A</div>
+        <div>
+          <div class="testi-name">Abhishek Jha</div>
+          <div class="testi-class">JEE Aspirant</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="section-tag">Contact Us</div>
+      <h2 class="section-title">Visit or Call Us Today</h2>
+      <p>We're located in Supaul, Bihar. Come visit us, give us a call, or message us on WhatsApp to book your free demo class.</p>
+
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div class="contact-item-text">
+            <div class="label">Address</div>
+            <div class="value">4JF2+PWH, Mela Rd, Supaul, Bihar 852131</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <div class="contact-item-text">
+            <div class="label">Phone</div>
+            <div class="value"><a href="tel:+917454957454">+91 74549 57454</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">⏰</div>
+          <div class="contact-item-text">
+            <div class="label">Timings</div>
+            <div class="value">Mon–Sat: 7:00 AM – 8:00 PM</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-btns">
+        <a href="https://wa.me/917454957454?text=Hello%2C%20I%20want%20to%20inquire%20about%20Samarpan%20Classes" class="btn-wa" target="_blank">
+          💬 WhatsApp Us
+        </a>
+        <a href="tel:+917454957454" class="btn-call">
+          📞 Call Now
+        </a>
+      </div>
+    </div>
+
+    <div class="map-wrap">
+      <iframe
+        src="https://maps.google.com/maps?q=4JF2%2BPWH,+Mela+Rd,+Supaul,+Bihar+852131&output=embed"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Samarpan Classes Location">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FINAL CTA ─── -->
+<section id="cta">
+  <div class="section-tag">Limited Seats Available</div>
+  <h2>Start Improving Your Maths Today</h2>
+  <p>Book your free demo class now. Limited seats available in every batch. Don't miss out.</p>
+  <a href="https://wa.me/917454957454?text=Hello%2C%20I%20want%20to%20book%20a%20free%20demo%20class%20at%20Samarpan%20Classes" class="btn-primary" target="_blank" style="font-size: 1rem; padding: 16px 34px;">
+    🎓 Book Your Demo Class Now
+  </a>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="logo">Samarpan <span>Classes</span></a>
+      <p>Expert Maths coaching in Supaul for Class 6–12, JEE Mains & Advanced, and NDA. Trusted by hundreds of students and parents across Supaul, Bihar.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#toppers">Results</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+917454957454">+91 74549 57454</a></li>
+        <li><a href="https://wa.me/917454957454" target="_blank">WhatsApp Us</a></li>
+        <li><a href="https://maps.app.goo.gl/xT4oCyeV8CEbt7ATA" target="_blank">Get Directions</a></li>
+        <li>Mela Rd, Supaul, Bihar 852131</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2025 Samarpan Classes. All rights reserved.</span>
+    <span>Best Maths Coaching in Supaul | JEE Coaching Supaul | NDA Coaching Supaul</span>
+  </div>
+</footer>
+
+<script>
+  // ─── Carousel dot sync ───────────────────────────────
+  (function() {
+    const track = document.getElementById('carouselTrack');
+    const dots  = document.querySelectorAll('#carouselDots span');
+    const total = 6; // real card count
+
+    if (!track || !dots.length) return;
+
+    function getCardWidth() {
+      const card = track.querySelector('.topper-card');
+      if (!card) return 282;
+      const style = getComputedStyle(track);
+      const gap = parseFloat(style.gap) || 22;
+      return card.offsetWidth + gap;
+    }
+
+    function updateDots() {
+      const cardW = getCardWidth();
+      const scrolled = track.getBoundingClientRect().left * -1 +
+                       track.parentElement.getBoundingClientRect().left * -1;
+      // derive index from CSS animation progress
+      const style = getComputedStyle(track);
+      const matrix = new DOMMatrix(style.transform);
+      const tx = Math.abs(matrix.m41);
+      const halfSet = cardW * total;
+      const pos = tx % halfSet;
+      const idx = Math.round(pos / cardW) % total;
+      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    }
+
+    // Poll every 400ms (CSS animation — no JS scroll event)
+    setInterval(updateDots, 400);
+
+    // Pause on hover already handled by CSS
+    // Drag-to-scroll (optional touch support)
+    let startX = 0, isDragging = false, animPaused = false;
+    track.addEventListener('mousedown', e => { startX = e.clientX; isDragging = true; track.style.animationPlayState = 'paused'; });
+    window.addEventListener('mouseup',  () => { isDragging = false; track.style.animationPlayState = 'running'; });
+  })();
+</script>
+
+<script>
+  function toggleMenu() {
+    const links = document.querySelector('.nav-links');
+    if (links.style.display === 'flex') {
+      links.style.display = 'none';
+    } else {
+      links.style.cssText = 'display:flex; flex-direction:column; position:fixed; top:68px; left:0; right:0; background:#fff; padding:20px 5%; border-bottom:2px solid #E8E8E8; gap:16px; z-index:999;';
+    }
+  }
+
+  // Close nav on link click (mobile)
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => {
+      const links = document.querySelector('.nav-links');
+      links.style.display = 'none';
+    });
+  });
+</script>
+
+</body>
+</html>
